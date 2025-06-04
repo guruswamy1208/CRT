@@ -1,17 +1,15 @@
 # Enter your code here
-class student:
-    def __init__(self,marks):  #default constructor
-        self.marks=marks
-        self.__marks=marks     # private
-    def getter(self):
-        return self.__marks
-    def setter(self,marks):
-        self.__marks=marks
-
-obj=student(78)
-# set the data:
-obj.setter(78)
-# get the data
-ans=obj.getter()
-print(ans)
-        
+a="Python programming"
+print(a.upper())
+print(a.lower())
+print(a.title())
+print(a.strip())
+print(a.lstrip())
+print(a.rstrip())
+print(a.replace('Python','java'))
+print(a.find("Python"))
+print(a.startswith("P"))
+print(a.endswith("g"))
+print(a.isalnum())
+print(a.isdigit())
+print(a.isalpha())

@@ -1,10 +1,8 @@
-#polymorphism
-class animal:
-    def speak():
-        return " animal is speaking"
-class bird(animal):
-    def speak():
-        return "bird is speaking"
-animal_object=animal
-bird_object=bird
-print(animal_object.speak())
+def fabonoic(n):
+    if(n==9):
+        return 9
+    else:
+        print(n,end=" ")
+        return fabonoic(n-1)
+ans=fabonoic(n)
+print(ans)

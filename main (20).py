@@ -1,28 +1,50 @@
-# pop
-def push(value):
-    top=-1
-    if(top==4):
-        return "stack is full"
-    else:
-        top=top+1
-        return stack.append(value)
+class atmsystem:
+    def __int__(self, initial_balance=0):
+        self.balance=initial_balance
         
-def pop():
-    top=5
-    if(top!=-1):
-        return stack.pop()
+    def deposit(self):
+        amount = int(input("enter the money you want"))
+        self.balance += amount
+        print(f"{amount} deposited succesfull.new balance")
+        
+    def withdraw(self):
+        amount = int(input("enter the money you want to withdraw"))
+        if amount > self.balance:
+            print("insufficient funds")
+        else:
+            self.balance -= amount
+            print(f"{amount} withdraw successfully. remaining balnce")
+            
+    def check_balance(self):
+        print(f"current balance: {self.balance}")
+    def exit(self):
+        print("thanks for using our atm service. have a great day")
+        
+tm = atmsystem(initial_balance=35000)
+
+
+while true:
+    print("\n------atm menu----")
+    print("1.deposit")
+    print("2.withdraw")
+    print("3.check balance")
+    print("4.exit")
+    choice = int(input("enter your choice: ")
+    
+    
+    if choice ==1:
+        atm.deposit()
+    elif choice == 2:
+        atm.withdraw()
+    elif choice == 3:
+        atm.check_balance()
+    elif choice == 4:
+        atm.exit()
+        break
     else:
-        top-=1
-        return "stack is empty"
-stack=[10]        # size as 5
-push(20)
-push(30)
-push(40)
-push(50)
-push(60)
-push(70)
-push(80)
-pop()
-pop()
-pop()
-print(stack)
+        print("invalid choice.please try again")
+        
+        
+        
+      
+    

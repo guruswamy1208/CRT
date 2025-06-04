@@ -1,38 +1,26 @@
-class BankAccount:
-    def _init_(self, account_holder, balance=0):
-        self.account_holder = account_holder
-        self.balance = balance
-        self.__balance=balance
-        
-    def deposit(self, amount):
-        if amount > 0:
-            self.__balance += amount
-            print(f"₹{amount} deposited successfully.")
-        else:
-            print("Enter a valid amount to deposit.")
+# Enter your code here
+class calci:
+    def __int__(self,a,b):
+        self.a=a
+        self.b=b
+    def add(a,b):
+        return a+b
+    def sub(a,b):
+        return a-b
+    def mul(a,b):
+        return a*b
+    def div(a,b):
+        return a/b
 
-    def withdraw(self, amount):
-        if amount > self.__balance:
-            print("Insufficient balance.")
-        elif amount <= 0:
-            print("Enter a valid amount to withdraw.")
-        else:
-            self.__balance -= amount
-            print(f"₹{amount} withdraw successfully.")
-
-    def check_balance(self):
-        print(f"Current balance: ₹{self.balance}")
-
-    def exit(self):
-        print("Thank you for banking with us. Goodbye!")
-# Menu-driven interface
-def main():
-    print("=== Welcome to Python Bank ===")
-    name = input("Enter your name to create an account: ")
-    account = BankAccount(account_holder=name)
-    while True:
-        print("\nPlease choose an option:")
-        print("1. Deposit Money")
-        print("2. withdraw Money")
-        print("3. check_balance")
-        print("4. exit")
+obj_1=calci
+a=int(input("enter the value of a"))
+b=int(input("enter the value of b"))
+ch=int(input("enter your choice"))
+if(ch==1):
+    print(obj_1.add(a,b))
+elif(ch==2):
+    print(obj_1.sub(a,b))
+elif(ch==3):
+    print(obj_1.mul(a,b))
+else:
+    print(obj_1.div(a,b))

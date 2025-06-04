@@ -1,13 +1,5 @@
-#single inheritance:
-class father:
-    def father_method():
-        return "this is father method"
-# inherting father class
-class child(father):
-    def child_method():
-        return "this is child method"
-parent_object=father
-child_object=child
-print(parent_object.father_method())
-print(child_object.child_method())
-print(child_object.father_method)
+arr=[10,20,30,40,50]
+sum=0
+for i in range(0,len(arr)):
+    sum=sum+arr[i]
+print(sum)
